@@ -1,5 +1,5 @@
-var id=1250929750;//ĞÂÎÅid
-var num=50;//ÈÈÆÀÏÔÊ¾ÌõÊı
+var id=1250929750;//æ–°é—»id
+var num=50;//çƒ­è¯„æ˜¾ç¤ºæ¡æ•°
 function getHotArr(data)
 {
 return  data.map(function(a,index){
@@ -8,5 +8,5 @@ return {"content":a.content,"up":a.up};
 });
 }
 $.get("http://coral.qq.com/article/"+id+"/hotcomment?reqnum="+num,function(data){
-   getHotArr(JSON.parse(data).data.commentid).map(function(a,index){console.log((index+1)+"*"+a.content+"----ÔŞ"+a.up+"\n");});
+   getHotArr(JSON.parse(data).data.commentid).map(function(a,index){console.log((index+1)+"*"+a.content+"----èµ"+a.up+"\n");});
 })
