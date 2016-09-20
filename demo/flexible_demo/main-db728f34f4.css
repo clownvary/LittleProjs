@@ -1,0 +1,232 @@
+/*! This file is created by wangyan */
+#base-style .clearfix:after {
+  content: '\200B';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+#base-style .clearfix {
+  *zoom: 1;
+}
+
+#base-style .worddec {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+#base-style .over-flow {
+  overflow: auto;
+  zoom: 1;
+}
+
+body {
+  background-color: red;
+}
+
+body a {
+  text-decoration: none;
+}
+
+.section {
+  overflow: auto;
+  zoom: 1;
+  width: 100%;
+  text-align: center;
+}
+
+.section-header {
+  height: 6.533333rem;
+}
+
+.section-header a {
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+.section-header img {
+  width: 10rem;
+  height: 6.493333rem;
+}
+
+.section-body {
+  min-height: 14.546667rem;
+  width: 100%;
+}
+
+.goods-ul {
+  padding: 0.066667rem;
+  overflow: auto;
+  zoom: 1;
+}
+
+.goods-ul li {
+  position: relative;
+  border-top: 0.013333rem solid red;
+  list-style-type: none;
+  background-color: white;
+  float: left;
+  width: 100%;
+  height: 2.746667rem;
+  display: block;
+}
+
+.goods-li-left {
+  float: left;
+  margin: 0.16rem;
+}
+
+.goods-li-left a {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.goods-li-left a img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.goods-li-right {
+  float: left;
+  margin: 0.16rem 0.16rem 0 0;
+  width: 6.933333rem;
+}
+
+.flag-title {
+  text-align: left;
+  line-height: 0.4rem;
+}
+
+[data-dpr="1"] .flag-title {
+  font-size: 12px;
+}
+
+[data-dpr="2"] .flag-title {
+  font-size: 24px;
+}
+
+[data-dpr="3"] .flag-title {
+  font-size: 36px;
+}
+
+.flag-title a {
+  color: black;
+}
+
+.flag-price {
+  text-align: left;
+  line-height: 0.4rem;
+  height: 0.426667rem;
+  margin-top: 0.32rem;
+  margin-bottom: 0.32rem;
+}
+
+.flag-price span {
+  vertical-align: middle;
+  display: inline-block;
+  width: 1.093333rem;
+  height: 0.4rem;
+  background-color: red;
+  color: white;
+  text-align: center;
+  border-radius: 0.053333rem;
+}
+
+[data-dpr="1"] .flag-price span {
+  font-size: 11px;
+}
+
+[data-dpr="2"] .flag-price span {
+  font-size: 22px;
+}
+
+[data-dpr="3"] .flag-price span {
+  font-size: 33px;
+}
+
+.flag-price strong {
+  vertical-align: middle;
+  margin-left: 0.053333rem;
+  color: red;
+}
+
+[data-dpr="1"] .flag-price strong {
+  font-size: 16px;
+}
+
+[data-dpr="2"] .flag-price strong {
+  font-size: 32px;
+}
+
+[data-dpr="3"] .flag-price strong {
+  font-size: 48px;
+}
+
+.flag-price small {
+  vertical-align: middle;
+  margin-left: 0.08rem;
+  color: red;
+}
+
+[data-dpr="1"] .flag-price small {
+  font-size: 12px;
+}
+
+[data-dpr="2"] .flag-price small {
+  font-size: 24px;
+}
+
+[data-dpr="3"] .flag-price small {
+  font-size: 36px;
+}
+
+.flag-info {
+  float: left;
+  text-align: left;
+  display: inline-block;
+  color: orange;
+}
+
+[data-dpr="1"] .flag-info {
+  font-size: 9px;
+}
+
+[data-dpr="2"] .flag-info {
+  font-size: 18px;
+}
+
+[data-dpr="3"] .flag-info {
+  font-size: 27px;
+}
+
+.getit {
+  position: absolute;
+  top: 1.866667rem;
+  right: 0.266667rem;
+}
+
+.getit a {
+  display: inline-block;
+  float: right;
+  width: 1.866667rem;
+  height: 0.613333rem;
+  background-color: red;
+  color: white;
+  text-align: center;
+  line-height: 0.613333rem;
+}
+
+[data-dpr="1"] .getit a {
+  font-size: 15px;
+}
+
+[data-dpr="2"] .getit a {
+  font-size: 30px;
+}
+
+[data-dpr="3"] .getit a {
+  font-size: 45px;
+}

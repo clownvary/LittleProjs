@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义checkbox样式</title>
+    <style rel="stylesheet">
+        .demo {
+            margin: 30px;
+
+        }
+
+        input[type='checkbox'] {
+            display: none;
+        }
+
+        .myck {
+            display: inline-block;
+            width: 40px;
+            height: 10px;
+            background-color: #b9a8a8;
+            position: relative;
+            border-radius: 3px;
+
+        }
+
+        .myck label {
+            cursor: pointer;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: #95cfc0;
+            position: absolute;
+            left: 3px;
+            top: -4px;
+            border-radius: 50%;
+            transition: all 1s;
+
+        }
+
+        .myck input[type='checkbox']:checked + label {
+            left: 17px;
+
+        }
+
+        .myck2 {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            border: solid 1px grey;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .myck2 label {
+            display: block;
+            cursor: pointer;
+            border: none;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            transition: all 0.5s;
+            color: grey;
+            /*margin: auto;*/
+            text-align: center;
+
+        }
+
+        .myck2 label:after {
+            font-size: 40px;
+            content: '✔';
+            vertical-align: middle;
+            position: relative;
+            text-shadow: -1px -2px 1px #938b8b;
+        }
+
+        .myck2 > input[type='checkbox']:checked + label {
+            color: #95cfc0;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="demo">
+    <div class="myck">
+        <input type="checkbox" id="ck" value="sss">
+        <label for="ck"></label>
+    </div>
+    <span>选我选中</span>
+</div>
+
+<div class="demo">
+    <div class="myck2">
+        <input type="checkbox" id="ck2" value="sss">
+        <label for="ck2"></label>
+    </div>
+    <span>选我选中</span>
+</div>
+
+
+</body>
+</html>
