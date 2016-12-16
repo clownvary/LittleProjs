@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+p{
+	margin-left: 10px;
+}
+.container{
+	width: 100%;
+
+}
+.box{
+	 margin: 0 auto;
+		width: 90%;
+		position: relative;
+}
+.box span{
+	display: inline-block;
+	margin-bottom: 10px;
+}
+.box label{
+	display: inline-block;
+	padding: 3px;
+	border-radius: 5px;
+	background-color: red;
+	color: white;
+}
+.box div textarea{
+	width: 100%;
+}
+.key
+{
+	width: 40%;
+}
+.btn{
+	position: absolute;
+	right: 0;
+}
+.btn button{
+	width: 50px;
+	height: 20px;
+}
+</style>
+<script type="text/javascript">
+function encryptByDES(message, key) {
+		var keyHex = CryptoJS.enc.Utf8.parse(key);
+    var encrypted = CryptoJS.DES.encrypt(message, keyHex, {
+        mode: CryptoJS.mode.ECB,
+        padding: CryptoJS.pad.Pkcs7
+    });
+    return encrypted.toString();
+	}
+
+function decryptByDES(ciphertext, key) {
+    var keyHex = CryptoJS.enc.Utf8.parse(key);
+    // direct decrypt ciphertext
+    var decrypted = CryptoJS.DES.decrypt({
+        ciphertext: CryptoJS.enc.Base64.parse(ciphertext)
+    }, keyHex, {
+        mode: CryptoJS.mode.ECB,
+        padding: CryptoJS.pad.Pkcs7
+    });
+    return decrypted.toString(CryptoJS.enc.Utf8);
+}
+function encode()
+{
+
+	var key =document.getElementsByName('key')[0];
+	var source=document.getElementsByName('source')[0];
+	var dest=document.getElementsByName('dest')[0];
+	dest.value=encryptByDES(source.value,key.value);
+
+}
+function decode()
+{
+	var key =document.getElementsByName('key')[0];
+	var source=document.getElementsByName('source')[0];
+	var dest=document.getElementsByName('dest')[0];
+	source.value=decryptByDES(dest.value,key.value);
+}
+
+</script>
+	<title>encrypt file</title>
+</head>
+<body>
+<p>在线加密解密 encode & decode</p>
+<div class="container">
+<div class="box">
+	<span>加密前字符</span>
+	<label>Des加密</label>
+	<div>
+		<textarea id="source" name="source" rows="10"></textarea>
+	</div>
+</div>
+
+<div class="box">
+<span>加密后字符</span>
+	<div>
+		<textarea id="source" name="dest" rows="10"></textarea>
+	</div>
+	
+</div>
+<div class="box">
+	<span>秘钥</span>
+	<input type="text" name="key" class="key">
+	<span class="btn">
+	<button class="encrypt" onclick="encode()" >加密</button>
+	<button class="decrypt" onclick="decode()">解密</button>
+	</span>
+
+</div>
+	
+</div>
+<script type="text/javascript" src='./tripledes.js'></script>
+<script type="text/javascript" src='./mode-ecb-min.js'></script>
+</body>
+</html>
